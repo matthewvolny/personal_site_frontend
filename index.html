@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kristin Kraseski</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(() => {
+
+            $(".scroll").on("click", function (e) {
+                e.preventDefault();
+                const button_id = $(this).attr("id");
+                console.log(button_id)
+                $("html, body").animate(
+                    {
+                        scrollTop: $(`#${button_id}_section`).offset().top,
+                    },
+                    850
+                );
+            });
+
+        });
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="logo-container">
+            <img id="logo" class="animation_image" src="./images/abstract_chart.png" alt="logo" />
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li id="nav_about" class="animation_about">
+                    <a id="about" class="scroll nav-button about" href="#about">About</a>
+                </li>
+                <li id="nav_projects" class="animation_projects">
+                    <a id="projects" class="scroll nav-button projects" href="#projects">Projects</a>
+                </li>
+                <li id="nav_blog" class="animation_blog">
+                    <a class="nav-button blog" href="pages/blogs.html">Blog</a>
+                </li>
+                <li id="nav_contact" class="animation_contact">
+                    <a id="contact" class="scroll nav-button contact" href="#contact">Contact</a>
+                </li>
+                <li id="hamb_nav" class="hamburger-nav">
+                    <ul>
+                        <li id="hamburger-li">
+                            <div id="nav-icon3">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <li id="nav_sign-in" class="animation_sign-in">
+                    <div id="sign-in" class="nav-button sign-in">Sign In</div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <nav class="nav-dropdown">
+        <ul>
+            <li id="first-li-dropdown">
+            </li>
+            <li class="drop">
+                <a id="about" class="scroll" href="#about">About</a>
+            </li>
+            <li class="drop">
+                <a id="projects" class="scroll portfolio" href="#projects">Projects</a>
+            </li>
+            <li class="drop">
+                <a class="portfolio" href="pages/blogs.html">Blog</a>
+            </li>
+            <li id="last_dropdown_item" class="drop">
+                <a id="contact" class="scroll contact" href="#contact">Contact</a>
+            </li>
+            <li id="dropdown_sign-in_container">
+                <div id="dropdown_sign-in" class="sign-in">Sign In</div>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <div class="background-mask">
+            <div class="login-container">
+                <form>
+                    <div>
+                        <!-- <div class="heading"></div> -->
+                        <img id="close-button" alt="close-button" src='./images/close-icon.png' />
+                        <div>
+                            <div class="heading">Welcome back!</div>
+                            <div>Login to access admin privileges.</div>
+                        </div>
+                    </div>
+                    <div class="form-input-headings">Email Address</div>
+                    <input class="form-input" name="email" type="email" placeholder="Email" />
+                    <div class="form-input-headings">Password</div>
+                    <input class="form-input" name="password" type="password" placeholder="Password" />
+                    <button type="submit" id="login-form-button">Login</button>
+                </form>
+            </div>
+        </div>
+        <div class="intro">
+            <div class="about-me-flex">
+                <div class="intro-and-skills-flex">
+                    <div class="lead-in lead-in_animation">Hi there, my name is</div>
+                    <div class="name name_animation">Kristin <span class="last_name">Kraseski</span></div>
+                    <div class="create-things-tagline tagline_animation">
+                        and I create things with code.
+                    </div>
+                    <div class="intro-blurb intro-blurb_animation">
+                        I'm a <span class="styled_text">creative engineer</span> who builds delightful
+                        web experiences. I can advise your company about
+                        the <span class="styled_text">web platform, performance, creative user
+                            interactions, and usable machine learning.</span>Click the
+                        links above or scroll down to learn more about me and what I am
+                        currently up to.
+                    </div>
+                </div>
+                <div class="profile-image-container">
+                    <!-- <div class="profile-image-inner-container"> -->
+                    <div class="my-photo-container">
+                        <img class="my-photo" src="./images/portrait-colored-background.png" alt="me">
+                    </div>
+                    <!-- </div> -->
+                </div>
+            </div>
+        </div>
+        <section id="about_section">
+            <div class="title">About</div>
+            <!-- <div class="about-me-flex"> -->
+            <!-- <div class="intro-and-skills-flex"> -->
+            <div class="about-me-intro">
+                In 2021 I ended an 8 year adventure as a Senior Engineer
+                at <a class="styled_text2">Google</a>. Since then, I've been working with companies
+                on creative projects, prototyping, or advising their engineering
+                teams. Some of the bigger companies I've worked with (that I can
+                talk about) include Google, Revel</a> and Moderna</a>.Before that, I
+                used to work on Chrome. Do you know that little profile
+                switcher button that in top right corner of your browser?
+                Yeah, I did that (but now it looks different. It's been
+                6+ years after all). Before that, in the prehistoric times,
+                I worked in finance, despite not really understanding or
+                caring about it. I have a masters in Computer Science from
+                <a class="styled_text2">McGill University</a>. I wrote a thesis on Reinforcement Learning,
+                which you can read <a class="styled_text2">here</a>, though I'm not sure why you would.
+                I've recently started focusing less on tech and more on art,
+                which is something I've wanted to do all my life! You can
+                see how that is going on my <a class="styled_text2">studio page</a>.
+            </div>
+            <div class="skills">
+                <!-- <img id="python_icon" class="svg svg_no_side_gap" src="./images/python-svgrepo-com (2)-cropped.svg" />
+                <img class="svg svg_no_side_gap" src="./images/javascript-svgrepo-com-cropped.svg" />
+                <img class="svg html_icon" src="./images/html-5-svgrepo-com-cropped.svg" />
+                <img class="svg css_icon" src="./images/css-3-svgrepo-com-cropped.svg" />
+                <img id="sql_icon" class="svg svg_no_side_gap" src="./images/Azure SQL Database-cropped.svg" />
+                <img class="svg svg_no_side_gap" src="./images/tableau-icon-svgrepo-com-cropped.svg" />
+                <img class="svg" src="./images/New_Power_BI_Logo (1)-cropped.svg" />
+                <img class="svg svg_no_side_gap" src="./images/excel-svgrepo-com-cropped.svg" /> -->
+                <img id="python_icon" class="svg" src="./images/python-svgrepo-com (2)-cropped.svg" />
+                <img id="js_icon"class="svg" src="./images/javascript-svgrepo-com-cropped.svg" />
+                <img id="html_icon" class="svg" src="./images/html-5-svgrepo-com-cropped.svg" />
+                <img id="css_icon" class="svg" src="./images/css-3-svgrepo-com-cropped.svg" />
+                <img id="sql_icon" class="svg" src="./images/Azure SQL Database-cropped.svg" />
+                <img id="tableau_icon" class="svg" src="./images/tableau-icon-svgrepo-com-cropped.svg" />
+                <img id="bi_icon" class="svg" src="./images/New_Power_BI_Logo (1)-cropped.svg" />
+                <img id="excel_icon" class="svg" src="./images/excel-svgrepo-com-cropped.svg" />
+            </div>
+            <a id="resume" class="resume" href="./public/Matthew_Volny_Resume.pdf" target="_blank">Resume</a>
+            <!-- </div> -->
+            <!-- <div class="profile-image-container">
+                    <div class="profile-image-inner-container">
+                        <div class="my-photo-container">
+                            <img class="my-photo" src="./images/portrait-colored-background.png" alt="me">
+                        </div>
+                    </div>
+                </div> -->
+        </section>
+        <div class="spacer"></div>
+        <section id="projects_section">
+            <div class="title">Projects</div>
+            <div id="project"></div>
+        </section>
+        <div class="spacer"></div>
+        <section id="contact_section">
+            <div class="title">Get In Touch</div>
+            <div class="contact-me-paragraph">
+                If you like my work, please reach out! I am currently looking for
+                new opportunities in web development, and would love to hear from
+                you. I can be reached via <span class="styled_text2">LinkedIn</span> or via email (see below). Thanks
+                for visiting.
+                I am available for freelance work for prototyping, in a consulting capacity,
+                or as a tech advisor. If you would like to get in touch with me about working
+                with you, I am available for freelance work for prototyping, in a consulting
+                capacity, or as a tech advisor. If you would like to get in touch with me about
+                working with you, <span class="styled_text2">email me</span> and we'll chat!email me and we'll chat!
+            </div>
+            <div class="contact-me-button-container">
+                <a id="say_hello" href="mailto:matthew.volny@gmail.com" rel="noopener noreferrer" target="_blank">Say
+                    Hello</a>
+            </div>
+        </section>
+    </main>
+    <div class="footer">
+        <div class="built-by">Built by Kristin Kraseski</div>
+        <ul class="footer-links">
+            <li id="show-new-footer-link3" class="footer-icons-container">
+                <a class="personal-site-links footer-link-bottom"
+                    href="https://www.linkedin.com/in/matthew-volny-a12965138/" target="_blank"><img
+                        class="previously-sidebar-footer-icon" src="./images/linkedin-icon-colored.png" alt="" /></a>
+                <a class="personal-site-links footer-link-top"
+                    href="https://www.linkedin.com/in/matthew-volny-a12965138/" target="_blank"><img
+                        class="previously-sidebar-footer-icon" src="./images/linkedin-icon.png" alt="" /></a>
+            </li>
+            <li id="show-new-footer-link1" class="footer-icons-container">
+                <a class="personal-site-links footer-link-bottom" href="https://github.com/matthewvolny"
+                    target="_blank"><img class="previously-sidebar-footer-icon" src="./images/github-icon-colored.png"
+                        alt="" /></a>
+                <a class="personal-site-links footer-link-top" href="https://github.com/matthewvolny"
+                    target="_blank"><img class="previously-sidebar-footer-icon" src="./images/github-icon.png"
+                        alt="" /></a>
+            </li>
+        </ul>
+    </div>
+    <script type="module" src="./scripts.js"></script>
+</body>
+
+</html>

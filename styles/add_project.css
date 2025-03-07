@@ -1,0 +1,98 @@
+:root {
+    font-size: 1.2rem;
+    color: #000000;
+    letter-spacing: 0.05rem;
+    margin: 2.5em 4.9em 2.2em 4.9em;
+    font-family: "Roboto", sans-serif;
+    line-height: 1.77rem;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  body *+* {
+    margin-top: 1.6rem;
+  }
+  
+  body {
+    background-color: white;
+    margin: 0 auto;
+    font-size: 1.2rem;
+    max-width: 910px;
+    min-width: 250px;
+  }
+
+  #page_title {
+    margin-top: 0.9rem;
+    font-size: 2.5em;
+    font-weight: 700;
+    line-height: 3.4rem;
+    letter-spacing: .1rem;
+    margin-bottom: 2rem;
+  }
+
+  #project_component_nav {
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 1rem;
+  }
+
+ #project_component_nav button,
+ #submit {
+margin-top: 0;
+    color: white;
+    background-color: #39948E;
+    border: #39948E solid 1px;
+    border-radius: 1rem;
+    padding: 0.3rem 0.85rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.3rem;
+  }
+
+  #submit {
+    display: inline-block;
+    width: 250px;
+    background-color: #dd4b49;
+    border: #dd4b49 solid 1px;
+
+  }
+
+  #project_component_nav button:hover,
+  #submit:hover {
+    color: white;
+    background-color: #2f7b76;
+    border: #2f7b76 solid 1px;
+    cursor: pointer;
+  }
+
+  #tags_title {
+        margin-top: .5rem;
+        font-size: 1.66rem;
+        font-weight: 600;
+  }
+
+  #tags {
+    border: solid 2px #2f7b76;
+    border-radius: 1rem;
+    height: 250px;
+    padding: 1rem;
+    font-size: 1.2rem;
+  }
+
+  #form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  input {
+    margin-top: 1rem;
+    margin-bottom: 0;
+    font-size: 1.2rem;
+    line-height: 1.85rem;
+    height: 100px;
+  }

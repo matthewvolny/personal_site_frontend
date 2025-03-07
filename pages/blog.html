@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="stylesheet" type="text/css" href="../styles/blog_styles.css">
+    <link rel="stylesheet" href="../prism/prism.css">
+</head>
+
+<body>
+    <header>
+        <a href="../index.html" class="logo-container" id="logo">
+            <img src="../images/abstract_chart.png" alt="logo" />
+        </a>
+        <nav class="main-nav">
+            <ul>
+                <li id="nav_about">
+                    <a id="home" class="nav-button" href="../index.html">Home</a>
+                </li>
+                <li id="nav_blog">
+                    <a class="nav-button blog" href="../pages/blogs.html">Blog</a>
+                </li>
+                <li id="hamb_nav" class="hamburger-nav">
+                    <ul>
+                        <li id="hamburger-li">
+                            <div id="nav-icon3">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <li id="nav_sign-in">
+                    <div id="sign-in" class="nav-button sign-in">Sign In</div>
+                </li>
+            </ul> 
+        </nav>
+    </header>
+    <nav class="nav-dropdown">
+        <ul>
+            <li id="first-li-dropdown" >
+            </li>
+            <li class="drop">
+                <a id="home" class="scroll" href="../index.html">Home</a>
+            </li>
+            <li id="last_dropdown_item" class="drop">
+                <a id="dropdown_blog" class="blog" href="../pages/blogs.html">Blog</a>
+            </li>
+            <li id="dropdown_sign-in_container">
+                <div id="dropdown_sign-in" class="sign-in">Sign In</div>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <div class="background-mask">
+            <div class="login-container">
+                <form>
+                    <div>
+                        <!-- <div class="heading"></div> -->
+                        <img id="close-button" alt="close-button" src='../images/close-icon.png' />
+                        <div>
+                            <div class="heading">Welcome back!</div>
+                            <div>Login to access admin privileges.</div>
+                        </div>
+                    </div>
+                    <div class="form-input-headings">Email Address</div>
+                    <input class="form-input" name="email" type="email" placeholder="Email" />
+                    <div class="form-input-headings">Password</div>
+                    <input class="form-input" name="password" type="password" placeholder="Password" />
+                    <button type="submit" id="login-form-button">Login</button>
+                </form>
+            </div>
+        </div>
+        <section id="blog">
+        </section>
+    </main>
+    <script src="../prism/prism.js"></script>
+    <script type="module" src="../scripts/blog_scripts.js"></script>
+</body>
+
+</html>
