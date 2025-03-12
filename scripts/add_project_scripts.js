@@ -23,6 +23,11 @@ form.addEventListener("submit", (event) => {
         form_data_raw.append('element_id', element.id);
     }
 
+    // Display the key/value pairs
+    // for (var pair of form_data_raw.entries()) {
+    //     console.log(pair[0]+ ', ' + pair[1]); 
+    // }
+
     // fetch('http://localhost:3000/project', {
     fetch('https://tiny-tanuki-0bad90.netlify.app/api/project', {
         method: "POST",
@@ -41,13 +46,24 @@ form.addEventListener("submit", (event) => {
 
 function add_input_box(button_id, button_classes) {
     console.log('input box created for', button_id);
-    const input_box = document.createElement("input");
+    
+    let input_box = null
+
+    if (button_classes.contains('textarea')) {
+        input_box = document.createElement("textarea");
+    } else {
+        input_box = document.createElement("input");
+    }
+
     input_box.id = counter++;
     // input_box.classList.add('text');
     // input_box.classList.add(button_id);
     input_box.name = `${button_id}_${Math.floor(Math.random() * 10000)}`;
 
-    if (button_classes.contains('text')) {
+    if (button_classes.contains('textarea')) {
+        input_box.type = 'textarea'
+        input_box.placeholder = `Input ${button_id} here...`;
+    } else if (button_classes.contains('text')) {
         input_box.classList.add('input_text');
         input_box.type = 'text'
         input_box.placeholder = `Input ${button_id} here...`;

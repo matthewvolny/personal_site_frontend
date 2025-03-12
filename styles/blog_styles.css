@@ -261,6 +261,11 @@ header {
 .code_container > pre {
       border: rgba(0, 0, 0, 0.1) solid 1px;
       border-radius: .2rem;
+      white-space: pre-wrap
+}
+
+.code_container > pre > code {
+  white-space: pre-wrap;
 }
 
 
