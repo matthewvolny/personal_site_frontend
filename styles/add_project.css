@@ -95,4 +95,29 @@ margin-top: 0;
     font-size: 1.2rem;
     line-height: 1.85rem;
     height: 100px;
+    /* position: relative; */
+    width: 90%;
+
+  }
+
+  textarea {
+    margin-top: 1rem;
+    margin-bottom: 0;
+    font-size: 1.2rem;
+    line-height: 1.85rem;
+    height: 100px;
+    /* position: relative; */
+    width: 90%;
+  }
+
+  .remove_button {
+    position: relative;
+    top: -6.75rem;
+    right: 10%;
+    background-color:#c14d8b;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 50px;
   }

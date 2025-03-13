@@ -44,6 +44,34 @@ form.addEventListener("submit", (event) => {
         });
 })
 
+function delete_input(button_name) {
+    console.log(button_name)
+
+    let form_elements = document.getElementsByClassName("form_el")
+    let remove_button = document.getElementsByClassName(button_name) 
+
+    let removed_element_id = null
+
+    for (let element of form_elements) {
+        if (element.name == button_name){
+            removed_element_id = element.id
+            element.remove();
+            remove_button[0].remove()
+        }
+    }
+
+    form_elements = document.getElementsByClassName("form_el")
+
+    for (let element of form_elements) {
+        console.log(element.id, removed_element_id)
+        if (element.id > removed_element_id){
+            element.id = element.id-1
+        }
+    }
+
+
+}
+
 function add_input_box(button_id, button_classes) {
     console.log('input box created for', button_id);
     
@@ -58,19 +86,37 @@ function add_input_box(button_id, button_classes) {
     input_box.id = counter++;
     // input_box.classList.add('text');
     // input_box.classList.add(button_id);
-    input_box.name = `${button_id}_${Math.floor(Math.random() * 10000)}`;
+    
+    random_name = `${button_id}_${Math.floor(Math.random() * 10000)}`;
+    input_box.name = random_name
 
     if (button_classes.contains('textarea')) {
         input_box.type = 'textarea'
+        input_box.classList.add('input_textarea');
+        input_box.classList.add('form_el');
         input_box.placeholder = `Input ${button_id} here...`;
     } else if (button_classes.contains('text')) {
         input_box.classList.add('input_text');
+        input_box.classList.add('form_el');
         input_box.type = 'text'
         input_box.placeholder = `Input ${button_id} here...`;
     } else {
         input_box.classList.add('input_file');
+        input_box.classList.add('form_el');
         input_box.type = 'file'
     }
 
     form.appendChild(input_box);
+    
+    const remove_button = document.createElement("div");
+    remove_button.classList.add('remove_button');
+    remove_button.classList.add(random_name);
+    remove_button.textContent = "X"
+
+    form.append(remove_button)
+    
+    remove_button.addEventListener('click', function () {
+        delete_input(remove_button.classList[1]);
+    })
+     
 }
