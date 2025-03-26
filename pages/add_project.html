@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>Add Project</div>
+    <div id="project_component_nav">
+        <button class="button text" id="title">Title</button>
+        <button class="button image" id="display_image">Display Image</button>
+        <button class="button text" id="summary">Summary</button>
+        <button class="button text" id="heading">Header</button>
+        <button class="button text" id="text">Text</button>
+        <button class="button text" id="code">Code</button>
+        <button class="button image" id="image">Image</button>
+    </div>
+    <form id="form" action="/project" method="POST">
+        <label for="tags">Select tags for post:</label>
+        <select name="tags" id="tags" multiple>
+            <option value="Python">Python</option>
+            <option value="Javascript">Javascript</option>
+            <option value="Visualization">Visualization</option>
+            <option value="Analysis">Analysis</option>
+        </select>
+        <br><br>
+        <button type="submit">Submit</button>
+    </form>
+
+    <script src="../scripts/add_project_scripts.js"></script>
+</body>
+
+</html>
