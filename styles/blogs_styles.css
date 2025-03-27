@@ -344,7 +344,7 @@ header {
   flex-direction: row;
   justify-content: space-between;
   text-decoration: none;
-  border: #2f7b76 1px solid;
+  /* border: #2f7b76 1px solid; */
   /* align-items: center; */
 
   /* align-items: stretch; */
@@ -377,38 +377,29 @@ header {
 .image_container {
   width: 230px;
   flex-shrink: 0;
-  margin-top: .5rem;
-  background-color: #000000;
+  /* margin-top: .5rem; */
+  /* background-color: #000000; */
+  display: flex;
+  justify-content: center; /* Center the image horizontally */
+  align-items: start; /* Center the image vertically */
+  height: auto;
 }
 
 .image_container>img {
-  width: 100%;
+  /* width: 100%; */
+  width: 100%; /* Make the image fill the container's width */
+  height: auto; /* Make the image fill the container's height */
+  object-fit: contain; /* Ensure the image scales to fit the container without cropping */
 }
 
 .project-image-container>.project-details {
   margin-top: 0;
   text-align: left;
   vertical-align: middle;
-  padding: .2rem 0rem .2rem 1.5rem;
+  padding: .2rem 0rem 0rem 1.5rem;
   flex-grow: 1;
-
-  /* white-space: normal;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  text-overflow: ellipsis; */
-  /* Allow text to wrap */
-  
-  
+  /* white-space: normal;*/
   /* overflow: hidden; */
-
-
-  /* line-clamp: 6;*/
-  /* display: -webkit-box; */
-  /*-webkit-line-clamp: 6;
-  -webkit-box-orient: vertical;*/
-  
-
-  /* Add ellipsis when text overflows */
   position: relative;
 }
 
@@ -436,10 +427,9 @@ header {
   line-height: 1.85rem;
   color: #000000;
   /* white-space: normal; */
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  /* text-overflow: ellipsis; */
-  height: 100px;
+  /* height: auto; */
+  /* display: -webkit-box;
+  -webkit-box-orient: vertical; */
 }
 
 main {
@@ -757,9 +747,15 @@ main {
 }
 
 
+@media only screen and (max-width: 670px) {
+  :root {
+    font-size: 1.1rem;
+  }
 
-
-
+  .blog_heading {
+    font-size: 2.45em;
+  }
+}
 
 @media only screen and (max-width: 650px) {
   :root {

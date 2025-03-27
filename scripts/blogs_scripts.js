@@ -273,17 +273,14 @@ function set_dropdown_sign_in_button_event_listener() {
 
 
 
-// Function to adjust the text at the end of the last valid word
+// adjust project description text
 function adjustText() {
 
     const projects = document.getElementsByClassName('project-image-container')
     
     for (const project of projects){
 
-        // Get the current height/width of the container
-        const project_desc = project.querySelector('.project-details > .description');
-        
-        // get original text of project with the matching id
+        // 1) get original text of project with the matching id
         console.log(formatted_projects[project.id])
         let original_text = null
         
@@ -295,36 +292,118 @@ function adjustText() {
         }
         console.log(original_text)
 
+
+
+        // 2) count # of overflowing proj title rows
+        function getNumberOfTitleRows() {
+            const container = project.getElementsByClassName('project-name')[0];
+            const lineHeight = parseInt(window.getComputedStyle(container).lineHeight, 10);
+            const containerHeight = container.offsetHeight;
+            
+            // Calculate the number of rows
+            const numberOfRows = Math.floor(containerHeight / lineHeight);
+            
+            return numberOfRows;
+        }
+
+        const num_title_rows = getNumberOfTitleRows()
+
+        // Get proj description element
+        const project_desc = project.querySelector('.project-details > .description');
+
+        // set height of proj desc element based on # of title rows
+        if (num_title_rows == 3){
+            project_desc.style.height = '50px';
+        } else if (num_title_rows == 2){
+            project_desc.style.height = '75px';
+        } else {
+            project_desc.style.height = '100px';
+        }
+
+       
         const project_desc_width = project_desc.offsetWidth;
 
         //set number lower for wider screen width perhaps 
         // (i.e. 12.5 at max width, 13 at lower widths).
-        const chars_per_line = project_desc_width/13
+        
+        let windowWidth = document.documentElement.clientWidth;
+        console.log("Window width:", windowWidth);
+
+        let chars_per_line_divisor = null
+
+        if (windowWidth>=800){
+            chars_per_line_divisor=13.3
+        } else if (windowWidth<800){
+            chars_per_line_divisor=14.7
+        }
+
+        const chars_per_line = project_desc_width/chars_per_line_divisor
         
         console.log('project_desc_width: ', project_desc_width)
 
-        const style = getComputedStyle(project_desc);
-        const height = parseFloat(style.height);
-        const lineHeight = parseFloat(style.lineHeight);
+        const project_desc_style = getComputedStyle(project_desc);
+        const height = parseFloat(project_desc_style.height);
+        const lineHeight = parseFloat(project_desc_style.lineHeight);
       
+        console.log(height, lineHeight)
+
         const visibleLines = Math.ceil(height / lineHeight);
         const totalLines = Math.ceil(project_desc.scrollHeight / lineHeight);
-        const overflowingLines = totalLines - visibleLines;
+        
+        console.log(visibleLines, totalLines)
+
+        
+        let overflowingLines = totalLines - visibleLines;
       
         console.log('totalLines: ', totalLines)
+
+        // incorrect on page load
         console.log('overflowingLines: ', overflowingLines)
+
+        // //count # of overflowing proj title rows
+        // function getNumberOfTitleRows() {
+        //     const container = project.getElementsByClassName('project-name')[0];
+        //     const lineHeight = parseInt(window.getComputedStyle(container).lineHeight, 10);
+        //     const containerHeight = container.offsetHeight;
+            
+        //     // Calculate the number of rows
+        //     const numberOfRows = Math.floor(containerHeight / lineHeight);
+            
+        //     return numberOfRows;
+        //   }
+        
+        // const num_title_rows = getNumberOfTitleRows()
+
+        if (num_title_rows == 3){
+            overflowingLines = overflowingLines+(num_title_rows-2)
+            console.log('overflowingLines: ', overflowingLines)
+            // project_desc.style.height = '50px';
+        } else if (num_title_rows == 2){
+            overflowingLines = overflowingLines+(num_title_rows-1)
+            console.log('overflowingLines: ', overflowingLines)
+            // project_desc.style.height = '75px';
+        } else {
+            // project_desc.style.height = '100px';
+
+        }
+
+
+
 
         const visible_lines_count = totalLines - overflowingLines
         const total_chars = chars_per_line * visible_lines_count
 
         let split_str = original_text.substring(0,total_chars).split(' ')
+        // let split_str = project_desc.textContent.substring(0,total_chars).split(' ')
+
         split_str.pop()
         console.log(split_str.join(' ')+'...')
 
         project_desc.textContent = split_str.join(' ')+'...'
+
         // Set the maximum number of lines that the text can occupy
-        project_desc.style.webkitLineClamp = totalLines - overflowingLines;
-        project_desc.style.lineClamp = totalLines - overflowingLines;
+        // project_desc.style.webkitLineClamp = totalLines - overflowingLines;
+        // project_desc.style.lineClamp = totalLines - overflowingLines;
         
     }
     
