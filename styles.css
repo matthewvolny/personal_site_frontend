@@ -440,7 +440,7 @@ section.in-viewport {
   justify-content: space-between;
   flex-wrap: wrap;
   flex-direction: row;
-  row-gap: 10px;
+  row-gap: 19px;
 }
 
 .project-image-container {
@@ -448,17 +448,35 @@ section.in-viewport {
   position: relative;
   margin-top: 0;
   overflow: hidden;
-  background-color: rgb(31, 31, 31);
+  background-color: rgb(97, 219, 52);
   z-index: 50;
-  width: 280px;
+  /* width: 280px; */
   box-shadow: 0 3px 10px rgba(147, 147, 147, 0.1);
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: center; /* Center the image horizontally */
+  align-items: center; /* Center the image vertically */
+  height: auto;
+  /* padding-top: 100%; */
+  /* Maintain the height based on the aspect ratio of the image */
 }
 
 /* images must be taller than wide, 
 this may require some troubleshooting to get proper
 aspect ratio  */
 .project-image-container>img {
-  width: 100%;
+
+  /* width: 100%;
+  height: 100%; 
+  object-fit: contain;  */
+  /* object-fit: cover;  */
+  /* object-fit: contain; */
+  /* position: absolute; Position image absolutely inside the container */
+  /* top: 0;
+  left: 0; */
+  width: 100%; /* Make the image fill the container's width */
+  height: auto; /* Make the image fill the container's height */
+  object-fit: contain; /* Ensure the image scales to fit the container without cropping */
 }
 
 .project-details {
@@ -474,6 +492,10 @@ aspect ratio  */
   height: 100%;
   transform: translateY(100%);
   transition: all 200ms ease-in-out;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .blank {
@@ -498,21 +520,24 @@ aspect ratio  */
 }
 
 .project-image-container:hover .blank {
-  background-color: rgb(254, 203, 202, .95);
+  background-color: rgb(254, 203, 202, 1);
 }
 
 .project-name {
-  margin-top: .5rem;
-  font-size: 1.66rem;
+  margin-top: -.5rem;
+  font-size: 1.4rem;
   font-weight: 600;
+  line-height: 2rem;
 }
 
-.description {
+/* .description {
   margin-top: 1rem;
   margin-bottom: 0;
   font-size: 1.2rem;
   line-height: 1.85rem;
-}
+} */
+
+
 
 /*  */
 /* Contact me */
@@ -849,9 +874,7 @@ classes looping can likely be replaced with ids */
 
 @media only screen and (max-width: 1140px) {
   #project {
-    row-gap: 30px;
-    padding-left: 2.45rem;
-    padding-right: 2.45rem;
+    row-gap: 34px;
   }
 
   .project-image-container {
@@ -863,6 +886,11 @@ classes looping can likely be replaced with ids */
 
 
 
+@media only screen and (max-width: 1070px) {
+  #project {
+    row-gap: 32px;
+  }
+}
 
 
 @media only screen and (max-width: 1030px) {
@@ -876,6 +904,10 @@ classes looping can likely be replaced with ids */
     /* margin-top: 2.2rem;
     margin-bottom: 2.4rem;
     max-width: 95%; */
+  }
+
+   #project {
+    row-gap: 30px;
   }
 }
 
@@ -968,9 +1000,11 @@ classes looping can likely be replaced with ids */
 
 
 
-
-
-
+@media only screen and (max-width: 880px) {
+  #project {
+    row-gap: 28px;
+  }
+}
 
 
 
@@ -996,25 +1030,18 @@ classes looping can likely be replaced with ids */
     margin-right: auto;
   }
 
+  #project {
+    row-gap: 26px;
+  }
+
 }
 
 
 
 
-@media only screen and (max-width: 840px) {
-
-  /* :root {
-    margin: 2.4em 4em 2.2em 4em;
-  } */
-
+@media only screen and (max-width: 800px) {
   #project {
-    row-gap: 30px;
-    padding-left: 0rem;
-    padding-right: 0rem;
-  }
-
-  .project-image-container {
-    flex: 0 0 48%;
+    row-gap: 24px;
   }
 
 }
@@ -1055,27 +1082,11 @@ classes looping can likely be replaced with ids */
     height: 64px;
   }
 
-}
-
-@media only screen and (max-width: 730px) {
-
-
-
   #project {
-    row-gap: 30px;
-    padding-left: 2.45rem;
-    padding-right: 2.45rem;
-    /* max-width: 80%; */
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .project-image-container {
-    flex: 0 0 100%;
+    row-gap: 24px;
   }
 
 }
-
 
 
 @media only screen and (max-width: 750px) {
@@ -1107,19 +1118,36 @@ classes looping can likely be replaced with ids */
 
 
 
-
-
-
-
-
+@media only screen and (max-width: 740px) {
+  #project {
+    row-gap: 23px;
+  }
+}
 
 @media only screen and (max-width: 730px) {
   .my-photo-container {
     width: 300px;
   }
+  
+  #project {
+    row-gap: 35px;
+    padding-left: 2.85rem;
+    padding-right: 2.85rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .project-image-container {
+    flex: 0 0 100%;
+  }
+
+  .login-container {
+    width: 400px;
+    height: 680px;
+    padding: 2em 2.5em;
+  }
+
 }
-
-
 
 
 
@@ -1159,6 +1187,12 @@ classes looping can likely be replaced with ids */
     height: 2.7px;
   }
 
+  .login-container {
+    width: 370px;
+    height: 630px;
+    padding: 2em 2.5em;
+  }
+
 }
 
 @media only screen and (max-width: 570px) {
@@ -1180,5 +1214,11 @@ classes looping can likely be replaced with ids */
 @media only screen and (max-width: 450px) {
   :root {
     margin: 2.4em 2.5em 2.2em 2.5em;
+  }
+
+  .login-container {
+    width: 350px;
+    height: 615px;
+    padding: 2em 2.5em;
   }
 }

@@ -503,6 +503,25 @@ header {
 
 
 
+
+
+
+@media only screen and (max-width: 730px) {
+  .login-container {
+    width: 400px;
+    height: 680px;
+    padding: 2em 2.5em;
+  }
+
+}
+
+
+
+
+
+
+
+
 @media only screen and (max-width: 700px) {
 
   #nav_about,
@@ -553,8 +572,21 @@ header {
   #nav-icon3 span {
     height: 2.7px;
   }
+
+  .login-container {
+    width: 370px;
+    height: 630px;
+    padding: 2em 2.5em;
+  }
 }
 
+
+
+
+
+  
+  
+  
 
 
 
@@ -594,5 +626,11 @@ header {
 @media only screen and (max-width: 450px) {
   :root {
     margin: 2.4em 2.5em 2.2em 2.5em;
+  }
+
+  .login-container {
+    width: 350px;
+    height: 615px;
+    padding: 2em 2.5em;
   }
 }
