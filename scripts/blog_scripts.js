@@ -33,29 +33,6 @@ function render_project_steps(project_steps) {
 
             read_time_val = project_step['read_time']
             create_date_val = format_create_date(project_step['created_at'])
-
-        // hack to add read time and create date as separate div
-         } else if (project_step['type'] == 'displayimage') {
-            div.classList.add('date_and_read_time_container');
-            
-            const read_time = document.createElement("div");
-            read_time.innerText = `${read_time_val} min read`
-            read_time.id = 'read_time'
-
-            const dot = document.createElement("div");
-            dot.innerText = ' - '
-            dot.id = 'dot'
-
-            const project_created_date = document.createElement("div");
-            project_created_date.innerText = `${create_date_val}`
-            project_created_date.id = 'create_date'
-    
-            div.appendChild(read_time)
-            div.appendChild(dot)
-            div.appendChild(project_created_date)
-
-
-
         } else if (project_step['type'] == 'summary') {
             div.classList.add('summary');
             div.innerText = `${project_step['content']}`
@@ -79,7 +56,7 @@ function render_project_steps(project_steps) {
  
             Prism.highlightElement(code);
 
-        } else if (project_step['type'] == 'image') {
+        } else if (project_step['type'] == 'image' || project_step['type'] == 'displayimage') {
             div.classList.add('image_container');
             const image = document.createElement("img");
             image.src = project_step['public_url']
@@ -88,10 +65,35 @@ function render_project_steps(project_steps) {
             div.appendChild(image)   
         }  
 
+        if (project_step['type'] == 'displayimage') {
+            const create_read_time_div = document.createElement("div");
+
+            create_read_time_div.classList.add('date_and_read_time_container');
+            
+            const read_time = document.createElement("div");
+            read_time.innerText = `${read_time_val} min read`
+            read_time.id = 'read_time'
+
+            const dot = document.createElement("div");
+            dot.innerText = ' - '
+            dot.id = 'dot'
+
+            const project_created_date = document.createElement("div");
+            project_created_date.innerText = `${create_date_val}`
+            project_created_date.id = 'create_date'
+    
+            create_read_time_div.appendChild(read_time)
+            create_read_time_div.appendChild(dot)
+            create_read_time_div.appendChild(project_created_date)
+
+            fragment.appendChild(create_read_time_div)
+        } 
+
         if (['summary'].includes(project_step['type'])) {
-            const div = document.createElement("div");
-            div.classList.add('spacer');
-            fragment.appendChild(div)
+            const spacer_div = document.createElement("div");
+            spacer_div.classList.add('spacer');
+
+            fragment.appendChild(spacer_div)
         }  
 
         if (['title', 'displayimage', 'summary', 'heading', 'text', 'code', 'image'].includes(project_step['type'])) {

@@ -285,16 +285,9 @@ header {
   display: block;
 }
 
-
 .intro {
   margin-top: 15.5vh;
   padding-bottom: 3em;
-}
-
-.lead-in {
-  display: none;
-  color: #008c86;
-  font-size: 1.3rem;
 }
 
 .name {
@@ -304,14 +297,6 @@ header {
   line-height: 3.4rem;
   letter-spacing: .1rem;
   margin-bottom: 2rem;
-}
-
-.name+div {
-  display: none;
-  margin-top: 0.35rem;
-  font-size: 2.5em;
-  line-height: 3.4rem;
-  font-weight: 500;
 }
 
 .intro-blurb {
@@ -330,24 +315,19 @@ header {
   text-decoration: underline;
 }
 
-.lead-in_animation {
-  animation: fade-in-bottom 500ms ease-in-out both;
-  animation-delay: 1300ms;
-}
-
 .name_animation {
   animation: fade-in-bottom 500ms ease-in-out both;
   animation-delay: 1375ms;
 }
 
-.tagline_animation {
-  animation: fade-in-bottom 500ms ease-in-out both;
-  animation-delay: 1450ms;
-}
-
 .intro-blurb_animation {
   animation: fade-in-bottom 500ms ease-in-out both;
   animation-delay: 1525ms;
+}
+
+.my_photo_animation {
+  animation: fade-in-bottom 500ms ease-in-out both;
+  animation-delay: 1675ms;
 }
 
 @keyframes fade-in-bottom {
@@ -450,33 +430,19 @@ section.in-viewport {
   overflow: hidden;
   background-color: rgb(97, 219, 52);
   z-index: 50;
-  /* width: 280px; */
   box-shadow: 0 3px 10px rgba(147, 147, 147, 0.1);
   /* border: 1px solid red; */
   display: flex;
   justify-content: center; /* Center the image horizontally */
   align-items: center; /* Center the image vertically */
   height: auto;
-  /* padding-top: 100%; */
-  /* Maintain the height based on the aspect ratio of the image */
 }
 
-/* images must be taller than wide, 
-this may require some troubleshooting to get proper
-aspect ratio  */
+/* images should be a 10x10 aspect ratio */
 .project-image-container>img {
-
-  /* width: 100%;
-  height: 100%; 
-  object-fit: contain;  */
-  /* object-fit: cover;  */
-  /* object-fit: contain; */
-  /* position: absolute; Position image absolutely inside the container */
-  /* top: 0;
-  left: 0; */
-  width: 100%; /* Make the image fill the container's width */
-  height: auto; /* Make the image fill the container's height */
-  object-fit: contain; /* Ensure the image scales to fit the container without cropping */
+  width: 100%;
+  height: auto;
+  object-fit: contain;
 }
 
 .project-details {

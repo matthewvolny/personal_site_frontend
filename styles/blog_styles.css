@@ -210,7 +210,7 @@ header {
 .title {
   margin-top: 0.9rem;
   font-size: 2.5em;
-  line-height: 3.4rem;
+  line-height: 3.6rem;
   font-weight: 700;
   letter-spacing: .1rem;
 }
@@ -262,6 +262,12 @@ header {
       border: rgba(0, 0, 0, 0.1) solid 1px;
       border-radius: .2rem;
 }
+
+.code_container {
+  font-size: 1.15rem;
+}
+
+
 
 
 /*  */
@@ -471,8 +477,11 @@ header {
 
 
 
-
-
+@media only screen and (max-width: 1000px) {
+  .code_container {
+    font-size: 1.12rem;
+  }
+}
 
 @media only screen and (max-width: 840px) {
   :root {
