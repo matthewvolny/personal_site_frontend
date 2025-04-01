@@ -210,7 +210,7 @@ header {
 .title {
   margin-top: 0.9rem;
   font-size: 2.5em;
-  line-height: 3.6rem;
+  line-height: 3.8rem;
   font-weight: 700;
   letter-spacing: .1rem;
 }
@@ -228,20 +228,22 @@ header {
 
 .spacer {
   /* background-color:#FAC832; */
-  background-color: #BFE9DC;
+  /* background-color: #BFE9DC; */
+  background-color: #F5F2F0;
   width: 100%;
   height: .25rem;
   margin-top: 3rem;
 }
 
 .summary {
-  margin-top: 3rem;
+  margin-top: 3.8rem;
 }
 
-.heading {
+.heading_ {
   font-size: 1.65rem;
   font-weight: 600;
-  margin-bottom: 2rem;
+  margin-bottom: 2.7rem;
+  margin-top: 2.7rem;
 }
 
 .text {
@@ -251,11 +253,31 @@ header {
 .image_container {
   display: flex;
   width: 100%;
-  margin-top: 2rem;
+  margin-top: 2.7rem;
 }
 
 .image_container>img {
   width: 100%;
+}
+
+.display_image_container {
+  height: 650px;
+  margin-top: 4rem;
+}
+
+.display_image_container>img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* should add a link to populate this */
+.image_text {
+  width:100%;
+  display: flex;
+  justify-content: center;
+  display: none;
 }
 
 .code_container > pre {
@@ -265,6 +287,8 @@ header {
 
 .code_container {
   font-size: 1.15rem;
+  margin-top: 2.7rem;
+  margin-bottom: 2.7rem;
 }
 
 

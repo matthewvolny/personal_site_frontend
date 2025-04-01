@@ -371,7 +371,7 @@ header {
 section {
   visibility: hidden;
   opacity: 0;
-  transition: opacity 500ms linear, visibility 500ms linear;
+  transition: opacity 550ms linear, visibility 550ms linear;
   margin-top: 0;
   padding-bottom: 2.8rem;
   padding-top: 5.7rem;
@@ -381,7 +381,7 @@ section {
 section.in-viewport {
   visibility: visible;
   opacity: 1;
-  transition: none;
+  /* transition: none; */
   /* Disable transition for sections marked as 'in-viewport' */
 }
 
@@ -457,7 +457,7 @@ section.in-viewport {
   width: 100%;
   height: 100%;
   transform: translateY(100%);
-  transition: all 200ms ease-in-out;
+  transition: all 250ms ease-in-out;
   
   display: flex;
   justify-content: center;
@@ -477,7 +477,7 @@ section.in-viewport {
   height: 100%;
   z-index: 90;
   background-color: rgb(254, 203, 202, 0);
-  transition: all 200ms ease-in-out;
+  transition: all 250ms ease-in-out;
 }
 
 .project-image-container:hover .project-details {

@@ -38,7 +38,7 @@ function render_project_steps(project_steps) {
             div.innerText = `${project_step['content']}`
     
         } else if (project_step['type'] == 'heading') {
-            div.classList.add('heading');
+            div.classList.add('heading_');
             div.innerText = `${project_step['content']}`
         } else if (project_step['type'] == 'text') {
             div.classList.add('text');
@@ -58,6 +58,11 @@ function render_project_steps(project_steps) {
 
         } else if (project_step['type'] == 'image' || project_step['type'] == 'displayimage') {
             div.classList.add('image_container');
+            
+            if (project_step['type'] == 'displayimage') {
+                div.classList.add('display_image_container');
+            }
+
             const image = document.createElement("img");
             image.src = project_step['public_url']
             image.width = '500'
@@ -89,12 +94,21 @@ function render_project_steps(project_steps) {
             fragment.appendChild(create_read_time_div)
         } 
 
-        if (['summary'].includes(project_step['type'])) {
+        if (['displayimage'].includes(project_step['type'])) {
             const spacer_div = document.createElement("div");
             spacer_div.classList.add('spacer');
 
             fragment.appendChild(spacer_div)
         }  
+
+        if (project_step['type'] == 'summary') {
+            const image_text = document.createElement("div");
+            image_text.classList.add('image_text');
+            image_text.textContent = `photo`
+
+
+            fragment.appendChild(image_text)
+        }
 
         if (['title', 'displayimage', 'summary', 'heading', 'text', 'code', 'image'].includes(project_step['type'])) {
             fragment.appendChild(div)

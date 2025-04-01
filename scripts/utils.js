@@ -150,15 +150,13 @@ function remove_animations_and_make_sections_visible() {
     sign_in_button.classList.remove("animation_sign-in");
     logo_image.classList.remove("animation_image");
 
-    // const lead_in = document.getElementsByClassName('lead-in_animation')[0];
     const name = document.getElementsByClassName('name_animation')[0];
-    // const tagline = document.getElementsByClassName('tagline_animation')[0];
     const blurb = document.getElementsByClassName('intro-blurb_animation')[0];
+    const photo_container = document.getElementsByClassName("my_photo_animation")[0];
 
-    // lead_in.classList.remove("lead-in_animation");
     name.classList.remove("name_animation");
-    // tagline.classList.remove("tagline_animation");
     blurb.classList.remove("intro-blurb_animation");
+    photo_container.classList.remove("my_photo_animation");
 
     const sections = document.querySelectorAll("section");
 
