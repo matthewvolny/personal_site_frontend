@@ -4,7 +4,7 @@
   letter-spacing: 0.05rem;
   margin: 2.5em 4.9em 2.2em 4.9em;
   font-family: "Roboto", sans-serif;
-  line-height: 1.77rem;
+  line-height: 1.8rem;
 }
 
 * {
@@ -227,11 +227,12 @@ header {
   line-height: 3.4rem;
   font-weight: 700;
   letter-spacing: .1rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1.95rem;
 }
 
 #blog_blurb {
   width: 85%;
+  line-height: 2rem;
 }
 
 #categories {
@@ -422,7 +423,7 @@ header {
   margin-top: 1rem;
   margin-bottom: 0;
   font-size: 1.2rem;
-  line-height: 1.85rem;
+  line-height: 1.95rem;
   color: #000000;
   /* white-space: normal; */
   /* height: auto; */
