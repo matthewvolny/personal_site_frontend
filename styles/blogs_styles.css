@@ -339,7 +339,7 @@ header {
   font-weight: 700;
 }
 
-.project-image-container {
+/* .project-image-container {
   margin-top: 0;
   margin-bottom: 0;
   display: flex;
@@ -363,7 +363,33 @@ header {
   visibility: visible;
   max-height: 300px;
   margin-bottom: 3.1rem;
-  /* why no transition of margin-top? */
+} */
+
+.project-image-container {
+  margin-top: 0;
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-decoration: none;
+  
+  /* Initial state (not visible) */
+  opacity: 0;
+  max-height: 0;
+  visibility: hidden;
+
+  transition: opacity 225ms ease-in-out, 
+              max-height 400ms ease-in-out, 
+              visibility 100ms ease-in-out 250ms, /* Delay visibility transition */
+              margin-top 400ms ease-in-out,
+              margin-bottom 400ms ease-in-out;
+}
+
+.visible {
+  opacity: 1;
+  visibility: visible;
+  max-height: 300px; /* Adjust the final height as needed */
+  margin-bottom: 3.1rem;
 }
 
 .project-image-container:hover .project-name {
