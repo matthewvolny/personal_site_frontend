@@ -263,19 +263,29 @@ header {
 }
 
 .display_image_container {
-  height: 550px;
   margin-top: 4rem;
+  width: 100%;  /* Container takes up full width */
+  height: 0;
+  padding-bottom: 67%; /* 16:9 aspect ratio (9 / 16 = 0.5625 or 56.25%) */
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.display_image_container>img {
-  object-fit: cover;
-  /* width: 100%;
-  height: 100%; */
-  width: 100%;
-  /* height: 50vw; */
-  /* overflow: hidden; */
-
+.display_image_container > img {
+  position: absolute; /* Position the image inside the container */
+  top: 50%;  /* Center the image vertically */
+  left: 50%;  /* Center the image horizontally */
+  transform: translate(-50%, -50%); /* Offset the position to ensure it's centered */
+  width: 100%;  /* Ensure the image's width scales with the container */
+  height: 100%; /* Ensure the image's height scales with the container */
+  object-fit: cover;  /* Ensures the image scales and covers the container */
+  object-position: center; /* Show the center of the image */
 }
+
+
 
 /* should add a link to populate this */
 .image_text {
