@@ -96,15 +96,10 @@ function render_projects(formatted_projects) {
         project_name.classList.add('project-name');
         project_name.innerText = `${title['content']}`
 
-        // const description = document.createElement("div");
-        // description.classList.add('description');
-        // description.innerText = `${summary['content']}`
-
         project_image_container.appendChild(image)
         project_image_container.appendChild(project_details)
         project_image_container.appendChild(blank)
         project_details.appendChild(project_name)
-        // project_details.appendChild(description)
 
         fragment.appendChild(project_image_container)
 

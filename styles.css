@@ -40,11 +40,9 @@ header {
 /*  */
 
 .logo-container {
-  /* border: 1px solid red; */
   /* below width had to be added for safari compatibility 
   still needed? */
   width: 200px;
-  /* border: 1px solid red; */
 }
 
 .logo-container>img {
@@ -53,7 +51,6 @@ header {
   height: 135%;
   margin-top: -16px;
   margin-left: -13px;
-  /* border: 1px solid green; */
 }
 
 .animation_image {
@@ -306,13 +303,11 @@ header {
 
 .intro-blurb {
   max-width: 95%;
-  /* border: 1px solid red; */
   line-height: 1.95rem;
 }
 
 .styled_text {
   font-weight: bold;
-  /* color: #008c86; */
   color: #39948E;
 }
 
@@ -388,13 +383,10 @@ section {
 section.in-viewport {
   visibility: visible;
   opacity: 1;
-  /* transition: none; */
-  /* Disable transition for sections marked as 'in-viewport' */
 }
 
 section div:nth-of-type(2) {
   line-height: 1.95rem;
-  /* border: 1px solid red; */
 }
 
 .skills {
@@ -443,10 +435,9 @@ section div:nth-of-type(2) {
   background-color: rgb(97, 219, 52);
   z-index: 50;
   box-shadow: 0 3px 10px rgba(147, 147, 147, 0.1);
-  /* border: 1px solid red; */
   display: flex;
-  justify-content: center; /* Center the image horizontally */
-  align-items: center; /* Center the image vertically */
+  justify-content: center;
+  align-items: center;
   height: auto;
 }
 
@@ -508,15 +499,6 @@ section div:nth-of-type(2) {
   line-height: 2rem;
 }
 
-/* .description {
-  margin-top: 1rem;
-  margin-bottom: 0;
-  font-size: 1.2rem;
-  line-height: 1.85rem;
-} */
-
-
-
 /*  */
 /* Contact me */
 /*  */
@@ -537,11 +519,7 @@ section div:nth-of-type(2) {
 /* can likely streamline classes and rename/remove some */
 
 .built-by {
-  /* color: #39948E; */
   color: #8992b0;
-  /* color: #1231B5; */
-  /* color: #84B4F9; */
-  /* color: rgba(18, 49, 181, .7); */
   width: 100%;
   text-align: center;
   margin-top: 6rem;
@@ -608,13 +586,6 @@ section div:nth-of-type(2) {
   opacity: 1;
   transform: scale(1.1);
 }
-
-/* to do */
-
-/* streamline footer classes */
-/* audit footer javascript in scripts.js, 
-classes looping can likely be replaced with ids */
-/* make sure display images are taller than wide */
 
 
 /*  */
@@ -759,46 +730,19 @@ classes looping can likely be replaced with ids */
 
 .nav-dropdown {
   display: none;
-  /* position: absolute; */
-  /* border: 1px solid orangered; */
-  /* background-color: rgb(137, 146, 176, 0.7); */
-  /* background-color: rgba(191, 233, 220, 1); */
   background-color: rgba(18, 49, 181, .5);
   box-shadow: 0 3px 10px rgba(147, 147, 147, 0.1);
-  /* animation: slide-in-left 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-  margin-left: -4.9rem;
-  margin-right: -4.9rem; */
 }
 
-/* margin: 2.4em 4.9em 2.2em 4.9em; */
-
-/* @keyframes slide-in-left {
-  0% {
-    transform: translateX(-1000px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-} */
-
-
-
-
 .nav-dropdown>ul {
-  /* padding: 1.5rem; */
   padding: 0;
 }
 
 .nav-dropdown ul>li {
   list-style: none;
-  /* border: 1px solid red; */
   padding-left: 3rem;
-  /* padding-right: 1.5rem; */
   padding-top: .55rem;
   padding-bottom: 0.55rem;
-  /* text-align: right; */
 }
 
 
@@ -826,27 +770,11 @@ classes looping can likely be replaced with ids */
   text-underline-offset: .5rem;
 }
 
-.drop:hover>a {
-  /* color: black; */
-}
-
 #dropdown_sign-in_container {
   padding-bottom: 1.7rem;
   display: none;
   padding-top: .8rem;
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

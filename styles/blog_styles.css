@@ -39,11 +39,9 @@ header {
 /*  */
 
 .logo-container {
-  /* border: 1px solid red; */
   /* below width had to be added for safari compatibility 
   still needed? */
   width: 200px;
-  /* border: 1px solid red; */
 }
 
 .logo-container>img {
@@ -52,7 +50,6 @@ header {
   height: 135%;
   margin-top: -16px;
   margin-left: -13px;
-  /* border: 1px solid green; */
 }
 
 /*  */
@@ -231,8 +228,6 @@ header {
 }
 
 .spacer {
-  /* background-color:#FAC832; */
-  /* background-color: #BFE9DC; */
   background-color: #F5F2F0;
   width: 100%;
   height: .25rem;
@@ -268,7 +263,7 @@ header {
 
 .display_image_container {
   margin-top: 4rem;
-  width: 100%;  /* Container takes up full width */
+  width: 100%;
   height: 0;
   padding-bottom: 67%; /* 16:9 aspect ratio (9 / 16 = 0.5625 or 56.25%) */
   position: relative;
@@ -279,14 +274,14 @@ header {
 }
 
 .display_image_container > img {
-  position: absolute; /* Position the image inside the container */
-  top: 50%;  /* Center the image vertically */
-  left: 50%;  /* Center the image horizontally */
-  transform: translate(-50%, -50%); /* Offset the position to ensure it's centered */
-  width: 100%;  /* Ensure the image's width scales with the container */
-  height: 100%; /* Ensure the image's height scales with the container */
-  object-fit: cover;  /* Ensures the image scales and covers the container */
-  object-position: center; /* Show the center of the image */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 
@@ -455,18 +450,14 @@ header {
 }
 
 .nav-dropdown>ul {
-  /* padding: 1.5rem; */
   padding: 0;
 }
 
 .nav-dropdown ul>li {
   list-style: none;
-  /* border: 1px solid red; */
   padding-left: 3rem;
-  /* padding-right: 1.5rem; */
   padding-top: .55rem;
   padding-bottom: 0.55rem;
-  /* text-align: right; */
 }
 
 
@@ -488,33 +479,17 @@ header {
 }
 
 .drop:hover {
-  /* background-color: rgb(0, 140, 134, 0.4); */
-  /* background-color: rgba(6, 165, 157, 0.1); */
   text-decoration: underline;
   text-decoration-color: #FAC832;
   text-decoration-thickness: .2rem;
   text-underline-offset: .5rem;
 }
 
-/* .drop:hover>a {
-  color: black;
-} */
-
 #dropdown_sign-in_container {
   padding-bottom: 1.7rem;
   display: none;
   padding-top: .8rem;
 }
-
-
-
-
-
-
-
-
-
-
 
 
 
