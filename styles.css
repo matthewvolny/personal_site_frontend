@@ -43,7 +43,7 @@ header {
   /* border: 1px solid red; */
   /* below width had to be added for safari compatibility 
   still needed? */
-  /* width: 200px; */
+  width: 200px;
   /* border: 1px solid red; */
 }
 
@@ -1015,6 +1015,12 @@ classes looping can likely be replaced with ids */
 }
 
 
+
+@media only screen and (max-width: 840px) {
+  :root {
+    margin: 2.4em 4em 2.2em 4em;
+  }
+}
 
 
 @media only screen and (max-width: 800px) {

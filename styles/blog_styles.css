@@ -1,4 +1,3 @@
-/* global styles */
 :root {
   font-size: 1.2rem;
   color: #000000;
@@ -20,7 +19,7 @@ body {
   background-color: white;
   margin: 0 auto;
   font-size: 1.2rem;
-  max-width: 900px;
+  max-width: 910px;
   min-width: 250px;
 }
 
@@ -41,14 +40,19 @@ header {
 
 .logo-container {
   /* border: 1px solid red; */
-  /* below width had to be added for safari compatibility */
-  width: 100px;
+  /* below width had to be added for safari compatibility 
+  still needed? */
+  width: 200px;
+  /* border: 1px solid red; */
 }
 
 .logo-container>img {
   overflow: hidden;
   object-fit: cover;
-  height: 100%;
+  height: 135%;
+  margin-top: -16px;
+  margin-left: -13px;
+  /* border: 1px solid green; */
 }
 
 /*  */
