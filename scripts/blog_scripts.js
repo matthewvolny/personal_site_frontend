@@ -149,15 +149,10 @@ set_sign_in_button_event_listener()
 set_close_button_event_listener()
 
 let navDropdown = document.querySelector(".nav-dropdown");
-// let hamburgerLi = document.querySelector("#hamburger-li");
 let hamburgerButton = document.querySelector("#nav-icon3");
 let blogSection = document.querySelector("#blog");
 
 let dropdownToggle = false;
-
-// navDropdown.addEventListener("click", () => {
-//     console.log('clicked')
-// });
 
 hamburgerButton.addEventListener("click", () => {
   if (dropdownToggle === false) {

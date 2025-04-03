@@ -229,15 +229,10 @@ set_sign_in_button_event_listener()
 set_close_button_event_listener()
 
 let navDropdown = document.querySelector(".nav-dropdown");
-// let hamburgerLi = document.querySelector("#hamburger-li");
 let hamburgerButton = document.querySelector("#nav-icon3");
 let blogSection = document.querySelector("#blog");
 
 let dropdownToggle = false;
-
-// navDropdown.addEventListener("click", () => {
-//     console.log('clicked')
-// });
 
 hamburgerButton.addEventListener("click", () => {
   if (dropdownToggle === false) {
@@ -267,10 +262,6 @@ function set_dropdown_sign_in_button_event_listener() {
         login_container.id = 'login-container-visible'
     });
 }
-
-
-
-
 
 
 // adjust project description text
@@ -357,56 +348,27 @@ function adjustText() {
       
         console.log('totalLines: ', totalLines)
 
-        // incorrect on page load
         console.log('overflowingLines: ', overflowingLines)
-
-        // //count # of overflowing proj title rows
-        // function getNumberOfTitleRows() {
-        //     const container = project.getElementsByClassName('project-name')[0];
-        //     const lineHeight = parseInt(window.getComputedStyle(container).lineHeight, 10);
-        //     const containerHeight = container.offsetHeight;
-            
-        //     // Calculate the number of rows
-        //     const numberOfRows = Math.floor(containerHeight / lineHeight);
-            
-        //     return numberOfRows;
-        //   }
-        
-        // const num_title_rows = getNumberOfTitleRows()
 
         if (num_title_rows == 3){
             overflowingLines = overflowingLines+(num_title_rows-2)
             console.log('overflowingLines: ', overflowingLines)
-            // project_desc.style.height = '50px';
         } else if (num_title_rows == 2){
             overflowingLines = overflowingLines+(num_title_rows-1)
             console.log('overflowingLines: ', overflowingLines)
-            // project_desc.style.height = '75px';
-        } else {
-            // project_desc.style.height = '100px';
-
         }
-
-
 
 
         const visible_lines_count = totalLines - overflowingLines
         const total_chars = chars_per_line * visible_lines_count
 
         let split_str = original_text.substring(0,total_chars).split(' ')
-        // let split_str = project_desc.textContent.substring(0,total_chars).split(' ')
 
         split_str.pop()
         console.log(split_str.join(' ')+'...')
 
         project_desc.textContent = split_str.join(' ')+'...'
-
-        // Set the maximum number of lines that the text can occupy
-        // project_desc.style.webkitLineClamp = totalLines - overflowingLines;
-        // project_desc.style.lineClamp = totalLines - overflowingLines;
-        
     }
-    
   }
   
   // Run adjustText on window resize

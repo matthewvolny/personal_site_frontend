@@ -27,15 +27,10 @@ set_close_button_event_listener()
 add_footer_icon_event_listener()
 
 let navDropdown = document.querySelector(".nav-dropdown");
-// let hamburgerLi = document.querySelector("#hamburger-li");
 let hamburgerButton = document.querySelector("#nav-icon3");
 let introSection = document.querySelector(".intro");
 
 let dropdownToggle = false;
-
-// navDropdown.addEventListener("click", () => {
-//     console.log('clicked')
-// });
 
 hamburgerButton.addEventListener("click", () => {
   if (dropdownToggle === false) {
@@ -52,12 +47,6 @@ hamburgerButton.addEventListener("click", () => {
   }
 });
 
-// $(document).ready(function () {
-//   $("#nav-icon1,#nav-icon2,#nav-icon3,#nav-icon4").click(function () {
-//     $(this).toggleClass("open");
-//   });
-// });
-
 const navDropdownItems = document.querySelectorAll(".nav-dropdown > ul li > a");
 
 for (let i = 0; i < navDropdownItems.length; i++) {
@@ -69,7 +58,6 @@ for (let i = 0; i < navDropdownItems.length; i++) {
     introSection.style.marginTop = "16vh";
   });
 }
-
 
 function set_dropdown_sign_in_button_event_listener() {
     
