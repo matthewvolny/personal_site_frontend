@@ -10,8 +10,8 @@ function addInView() {
 }
 
 const get_projects = async () => {
-
-    const response = await fetch('http://localhost:3000/project', {
+    const response = await fetch('https://tiny-tanuki-0bad90.netlify.app/api/project', {
+    // const response = await fetch('http://localhost:3000/project', {
         method: "GET"
     })
 

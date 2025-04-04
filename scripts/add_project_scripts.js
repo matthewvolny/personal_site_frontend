@@ -23,7 +23,8 @@ form.addEventListener("submit", (event)=>{
         form_data_raw.append('element_id', element.id); 
     } 
 
-    fetch('http://localhost:3000/project', {
+    fetch('https://tiny-tanuki-0bad90.netlify.app/api/project', {
+    // fetch('http://localhost:3000/project', {
         method: "POST",
         body: form_data_raw
     })

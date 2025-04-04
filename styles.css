@@ -1137,4 +1137,8 @@ section div:nth-of-type(2) {
     height: 615px;
     padding: 2em 2.5em;
   }
+
+  .my-photo-container {
+    width: 265px;
+  }
 }
