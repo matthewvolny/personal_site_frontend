@@ -351,7 +351,7 @@ header {
 .title {
   font-size: 1.65rem;
   font-weight: 600;
-  margin-bottom: 2rem;
+  margin-bottom: 2.2rem;
 }
 
 .title+div {
@@ -504,7 +504,7 @@ section div:nth-of-type(2) {
 /*  */
 
 .contact-me-button-container {
-  margin-top: 2rem;
+  margin-top: 2.2rem;
 
 }
 
@@ -1042,7 +1042,7 @@ section div:nth-of-type(2) {
   } */
   
   #project {
-    row-gap: 35px;
+    row-gap: 40px;
     padding-left: 2.85rem;
     padding-right: 2.85rem;
     margin-left: auto;
@@ -1109,7 +1109,7 @@ section div:nth-of-type(2) {
 
 @media only screen and (max-width: 570px) {
   #project {
-    row-gap: 30px;
+    /* row-gap: 30px; */
     padding-left: 0rem;
     padding-right: 0rem;
   }
@@ -1129,7 +1129,16 @@ section div:nth-of-type(2) {
 
 @media only screen and (max-width: 450px) {
   :root {
-    margin: 2.4em 2.5em 2.2em 2.5em;
+    font-size: 1rem;
+    margin: 2.4em 2em 2.2em 2em;
+  }
+
+  .intro-blurb {
+    line-height: 1.8rem;
+  }
+
+  section div:nth-of-type(2){
+    line-height: 1.8rem;
   }
 
   .login-container {
@@ -1140,5 +1149,9 @@ section div:nth-of-type(2) {
 
   .my-photo-container {
     width: 265px;
+  }
+
+  .intro {
+    margin-top: 14vh;
   }
 }

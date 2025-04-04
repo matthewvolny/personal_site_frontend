@@ -652,7 +652,16 @@ header {
 
 @media only screen and (max-width: 450px) {
   :root {
-    margin: 2.4em 2.5em 2.2em 2.5em;
+    font-size: 1rem;
+    margin: 2.4em 2em 2.2em 2em;
+  }
+
+  .title {
+    line-height: 3.4rem;
+  }
+
+  .summary, .text {
+    line-height: 1.8rem;
   }
 
   .login-container {
